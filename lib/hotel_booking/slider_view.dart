@@ -92,16 +92,19 @@ class CustomThumbShape extends SliderComponentShape {
   @override
   void paint(
     PaintingContext context,
-    Offset thumbCenter, {
-    Animation<double> activationAnimation,
-    Animation<double> enableAnimation,
-    bool isDiscrete,
-    TextPainter labelPainter,
-    RenderBox parentBox,
-    SliderThemeData sliderTheme,
-    TextDirection textDirection,
-    double value,
-  }) {
+    Offset thumbCenter,
+    {
+      Animation<double> activationAnimation,
+      Animation<double> enableAnimation,
+      bool isDiscrete,
+      TextPainter labelPainter,
+      RenderBox parentBox,
+      Size sizeWithOverflow,
+      SliderThemeData sliderTheme,
+      TextDirection textDirection,
+      double textScaleFactor,
+      double value
+    }) {
     final Canvas canvas = context.canvas;
     final ColorTween colorTween = ColorTween(
       begin: sliderTheme.disabledThumbColor,
